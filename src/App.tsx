@@ -10,8 +10,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
         <p>
-          HUI app for interviews Costa and Vlad Production
-          Edit <code>src/App.tsx</code> and save to reload.
+          HUI app for interviews created by Golubzi Production
         </p>
         <span>
           <span>Learn </span>
