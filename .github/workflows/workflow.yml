@@ -1,8 +1,8 @@
-name: HUI Deploy CI/CD
+name: HUI app CI/CD
 
-on: 
+on:
   push:
-    branches: 
+    branches:
       - "main"
 
 jobs:
@@ -12,16 +12,35 @@ jobs:
     strategy:
       matrix:
         node-version: [15.x]
-
+    
     steps:
       - name: Checkout
         uses: actions/checkout@v1
 
       - name: Install and build
-        uses: npm install && npm run build
-
+        run: npm install && npm run build
+      
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4.2.2
+        uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           branch: gh-pages # The branch the action should deploy to.
-          folder: build # The folder the action should deploy.
+          folder: build # The folder the action should deploy.        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
