@@ -10,6 +10,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
         <p>
+          HUI app for interviews
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <span>

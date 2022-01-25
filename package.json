@@ -1,6 +1,6 @@
 {
   "name": "hyi",
-  "homepage": "https://",
+  "homepage": "https://constantinehuzenko.github.io/hackYourInterview/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,6 +20,8 @@
     "typescript": "^4.1.6"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
