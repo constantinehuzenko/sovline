@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/hackYourInterview/static/css/main.8ead4c18.css",
-    "main.js": "/hackYourInterview/static/js/main.7789501d.js",
+    "main.js": "/hackYourInterview/static/js/main.f389c9de.js",
     "static/media/logo.svg": "/hackYourInterview/static/media/logo.b2e5a01e505f739f1484b881277d5186.svg",
     "index.html": "/hackYourInterview/index.html",
     "main.8ead4c18.css.map": "/hackYourInterview/static/css/main.8ead4c18.css.map",
-    "main.7789501d.js.map": "/hackYourInterview/static/js/main.7789501d.js.map"
+    "main.f389c9de.js.map": "/hackYourInterview/static/js/main.f389c9de.js.map"
   },
   "entrypoints": [
     "static/css/main.8ead4c18.css",
-    "static/js/main.7789501d.js"
+    "static/js/main.f389c9de.js"
   ]
 }
