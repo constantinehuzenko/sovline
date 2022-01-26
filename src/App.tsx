@@ -11,7 +11,7 @@ function App() {
         <Counter />
         <p>HUI app for interviews created by Golubzi Production / <strong>DEV Branch</strong></p>
         <span>
-          <span>Learn </span>
+          <span>Learn wit meeeeeee</span>
           <a
             className="App-link"
             href="https://reactjs.org/"
