@@ -9,7 +9,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
-        <p>HUI app for interviews created by Golubzi Production</p>
+        <p>HUI app for interviews created by Golubzi Production / <strong>DEV Branch</strong></p>
         <span>
           <span>Learn </span>
           <a
