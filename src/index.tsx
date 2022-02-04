@@ -1,12 +1,41 @@
+import { App } from "App";
 import React from "react";
 import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
 import * as serviceWorker from "serviceWorker";
+import { setupStore } from "store/store";
+import { createGlobalStyle } from "styled-components";
+
+const store = setupStore();
+
+const GlobalStyle = createGlobalStyle`
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #131C28;
+  color: #ffffff;
+}
+
+#root {
+  max-width: 880px;
+  margin: 24px 0 160px 0;
+}
+`;
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Provider store={store}> */}
-    some
-    {/* </Provider> */}
+    <GlobalStyle />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );
