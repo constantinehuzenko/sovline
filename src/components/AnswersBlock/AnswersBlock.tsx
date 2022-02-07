@@ -1,5 +1,5 @@
+/* eslint-disable react/no-danger */
 import { ControlButton } from "components/ControlButton/ControlButton";
-import { useState } from "react";
 import { switchCorrectVisability } from "store/reducers/questionsSlice";
 import styled from "styled-components";
 import { useAppDispatch, useAppSelector } from "utils/hooks/redux";
