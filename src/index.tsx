@@ -17,7 +17,12 @@ const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
 }
 
+html {
+  width: 100%;
+}
+
 body {
+  width: 100%;
   display: flex;
   justify-content: center;
   background-color: #131C28;
@@ -25,7 +30,7 @@ body {
 }
 
 #root {
-  max-width: 880px;
+  width: 100%;
   margin: 24px 0 160px 0;
 }
 `;

@@ -1,4 +1,4 @@
-name: HUI app CI/CD
+name: HYI app CI/CD
 
 on:
   push:

@@ -51,6 +51,11 @@ export interface IStore {
   };
   questions: {
     list: Record<OneOfLanguageListType, Array<IQuestionItem> | null>;
-    current: IQuestionItem | null;
+    currentQuestion: IQuestionItem | null;
+    currentContent: DynamicContentTypes;
+    openResetModal: boolean;
+    isCorrectVisible: boolean;
   };
 }
+
+export type DynamicContentTypes = "questions" | "answers" | "explanation";
