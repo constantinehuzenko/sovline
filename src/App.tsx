@@ -2,7 +2,7 @@ import { AnswersBlock } from "components/AnswersBlock/AnswersBlock";
 import { useEffect } from "react";
 import { syncReduxAndLocalStore } from "services/questionsThunk";
 import styled from "styled-components";
-import { DynamicContentTypes } from "types/model";
+// import { DynamicContentTypes } from "types/model";
 import { useAppDispatch, useAppSelector } from "utils/hooks/redux";
 
 const CodeBlock = styled.div`
@@ -56,20 +56,21 @@ const Wrapper = styled.div`
   margin: 0 auto;
 `;
 
-const dynamicComponents: Record<DynamicContentTypes, JSX.Element> = {
-  questions: <div>question</div>,
-  answers: <div>showAnswers</div>,
-  explanation: <div>showExplanation</div>,
-};
+// const dynamicComponents: Record<DynamicContentTypes, JSX.Element> = {
+//   questions: <div>question</div>,
+//   answers: <div>showAnswers</div>,
+//   explanation: <div>showExplanation</div>,
+// };
 
 export const App = () => {
   const dispatch = useAppDispatch();
-  const { list, currentQuestion, openResetModal, currentContent } =
-    useAppSelector((state) => state.questions);
+  const { currentQuestion, openResetModal, currentContent } = useAppSelector(
+    (state) => state.questions
+  );
 
   useEffect(() => {
     dispatch(syncReduxAndLocalStore());
-  }, []);
+  }, [dispatch]);
 
   return (
     <Wrapper>

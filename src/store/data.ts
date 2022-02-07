@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { IQuestionItem } from "types/model";
 
 export const data: Array<IQuestionItem> = [
