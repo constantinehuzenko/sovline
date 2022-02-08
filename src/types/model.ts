@@ -21,7 +21,7 @@ export type OneOfPagesListType = keyof typeof PagesList;
 export type CodeLanguagesType = "js" | "react";
 
 interface ITestVariant {
-  id?: string;
+  id: string;
   text: string;
   isCorrect: boolean;
 }
@@ -30,10 +30,10 @@ export interface IQuestionItem {
   id: string;
   questionModel?: OneOfQuestionModelType;
   codeLanguage?: CodeLanguagesType;
-  header: string | null;
-  question: string | null;
-  testVariants: Array<ITestVariant> | null;
-  explanation: string | null;
+  header: string | null | undefined;
+  question: string | null | undefined;
+  testVariants: Array<ITestVariant> | null | undefined;
+  explanation: string | null | undefined;
   isMarked?: boolean;
   watched: boolean;
   rate?: number;
@@ -50,8 +50,11 @@ export interface IStore {
     currentPage: OneOfPagesListType;
   };
   questions: {
-    list: Record<OneOfLanguageListType, Array<IQuestionItem> | null>;
-    currentQuestion: IQuestionItem | null;
+    list: Record<
+      OneOfLanguageListType,
+      Array<IQuestionItem> | null | undefined
+    >;
+    currentQuestion: IQuestionItem | null | undefined;
     currentContent: DynamicContentTypes;
     openResetModal: boolean;
     isCorrectVisible: boolean;
