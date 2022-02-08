@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/hackYourInterview/static/js/main.8f8677df.js",
+    "main.js": "/hackYourInterview/static/js/main.f3fc2beb.js",
     "index.html": "/hackYourInterview/index.html",
-    "main.8f8677df.js.map": "/hackYourInterview/static/js/main.8f8677df.js.map"
+    "main.f3fc2beb.js.map": "/hackYourInterview/static/js/main.f3fc2beb.js.map"
   },
   "entrypoints": [
-    "static/js/main.8f8677df.js"
+    "static/js/main.f3fc2beb.js"
   ]
 }
