@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import * as serviceWorker from "serviceWorker";
 import { setupStore } from "store/store";
 import { GlobalStyle } from "styles/globalStyles";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 
 const store = setupStore();
 
@@ -13,9 +13,9 @@ ReactDOM.render(
   <React.StrictMode>
     <GlobalStyle />
     <Provider store={store}>
-      <BrowserRouter>
+      <HashRouter>
         <App />
-      </BrowserRouter>
+      </HashRouter>
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")
@@ -25,3 +25,6 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+// (<h1[\s\S]*?<\/h1>)[\s\S]*?(<pre>[\s\S]*?<\/pre>)
+// [\s\S]*?<ul>([\s\S]*?)<\/ul>
+// [\s\S]*?<p>[\s\S]*Ответ:.(\w)\n\n([\s\S]*)\n\n<\/p>
