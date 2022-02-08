@@ -6,7 +6,7 @@ import { DynamicContentTypes } from "types/model";
 import { useAppSelector } from "utils/hooks/redux";
 
 export const QuizPage = () => {
-  const { currentQuestion, currentContent } = useAppSelector(
+  const { currentQuestion, currentContent, openResetModal } = useAppSelector(
     (state) => state.questions
   );
 
@@ -34,7 +34,11 @@ export const QuizPage = () => {
 
   return (
     <Wrapper>
-      {content[currentContent]}
+      {openResetModal ? (
+        <h1>Your questions run out😭 Start Again?</h1>
+      ) : (
+        content[currentContent]
+      )}
       <AnswersBlock />
     </Wrapper>
   );

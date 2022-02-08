@@ -37,7 +37,9 @@ export const chooseCurrentQuestion =
       const random = randomNumber(0, watchedListLength - 1);
       const randomQuestion = watchedList?.[random];
 
-      dispatch(setQuestions(checkCurrentQuestion(watchedList, randomQuestion)));
+      dispatch(
+        setQuestions(checkCurrentQuestion(questionsList, randomQuestion))
+      );
       dispatch(setCurrentQuestion(randomQuestion));
       dispatch(setCurrentContent("questions"));
       localStorage.setItem(
