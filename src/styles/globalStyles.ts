@@ -1,6 +1,9 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css);
+
+
 *,
 *::before,
 *::after {
@@ -23,6 +26,6 @@ body {
 
 #root {
   width: 100%;
-  margin: 24px 0 160px 0;
+  margin: 24px 0 360px 0;
 }
 `;

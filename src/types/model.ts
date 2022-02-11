@@ -12,14 +12,18 @@ export enum PagesList {
   quiz = "quiz",
 }
 
+export enum CodeLanguagesList {
+  javascript = "javascript",
+  react = "react",
+}
+
 export type OneOfQuestionModelType = keyof typeof QuestionModel;
 
 export type OneOfLanguageListType = keyof typeof LanguageList;
 
 export type OneOfPagesListType = keyof typeof PagesList;
 
-export type CodeLanguagesType = "js" | "react";
-
+export type CodeLanguagesListType = keyof typeof CodeLanguagesList;
 interface ITestVariant {
   id: string;
   text: string;
@@ -29,7 +33,7 @@ interface ITestVariant {
 export interface IQuestionItem {
   id: string;
   questionModel?: OneOfQuestionModelType;
-  codeLanguage?: CodeLanguagesType;
+  codeLanguage?: CodeLanguagesListType;
   header: string | null | undefined;
   question: string | null | undefined;
   testVariants: Array<ITestVariant> | null | undefined;

@@ -41,7 +41,7 @@
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": ["error"],
     "max-len": [
-      "warn",
+      "off",
       {
         "code": 80
       }

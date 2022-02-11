@@ -1,13 +1,12 @@
 import { Route, Routes } from "react-router-dom";
+import { AddQuiz } from "./addQuiz/AddNewQuiz.page";
 import { QuizPage } from "./quiz/Quiz.page";
-
-const Some = () => <div>page in work now</div>;
 
 export const Routing = () => {
   return (
     <Routes>
       <Route path="/" element={<QuizPage />} />
-      <Route path="addNewQuestion" element={<Some />} />
+      <Route path="1" element={<AddQuiz />} />
     </Routes>
   );
 };

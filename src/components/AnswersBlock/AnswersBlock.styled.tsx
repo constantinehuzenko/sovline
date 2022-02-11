@@ -21,7 +21,8 @@ export const AnswersItem = styled.li`
   margin: 8px 0;
   list-style: none;
   user-select: none;
-  background: #192434;
+  background: #131c28;
+  box-shadow: 0 0 1px 2px #192434;
   border-radius: 16px;
   box-shadow: ${(props: { isCorrect: boolean; isVisible: boolean }) =>
     props.isVisible &&
@@ -39,9 +40,11 @@ export const AnswersItem = styled.li`
 
     > span {
       > code {
-        padding: 1px 5px;
-        border-radius: 6px;
-        background: #2600ff;
+        line-height: 20px;
+        color: white;
+        padding: 0.5px 2.5px;
+        border-radius: 3px;
+        background: #2600ff47;
       }
     }
   }
