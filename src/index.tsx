@@ -25,3 +25,6 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+// (<h1[\s\S]*?<\/h1>)[\s\S]*?(<pre>[\s\S]*?<\/pre>)
+// [\s\S]*?<ul>([\s\S]*?)<\/ul>
+// [\s\S]*?<p>[\s\S]*Ответ:.(\w)\n\n([\s\S]*)\n\n<\/p>
