@@ -6,7 +6,6 @@ import { Wrapper } from "components/Wrapper/Wrapper";
 import { useMemo } from "react";
 import { DynamicContentTypes } from "types/model";
 import { useAppSelector } from "utils/hooks/redux";
-import { Link } from "react-router-dom";
 
 export const QuizPage = () => {
   const { currentQuestion, currentContent, openResetModal } = useAppSelector(
