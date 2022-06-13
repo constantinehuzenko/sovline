@@ -11,25 +11,23 @@ const CodeBlockStyled = styled.div`
   }
 `;
 
-// export const CodeBlock = ({ code }: { code: string | null | undefined }) =>
-//   code ? (
-//     <CodeBlockStyled>
-//       <CodeBlockLibrary
-//         style={{
-//           fontFamily: "Fira Code ,monospace",
-//         }}
-//         language="javascript"
-//         text={code}
-//         showLineNumbers={false}
-//         theme={dracula}
-//         wrapLines
-//         codeBlock
-//       />
-//     </CodeBlockStyled>
-//   ) : (
-//     <div />
-//   );
+export const CodeBlock = ({ code }: { code: string | null | undefined }) =>
+  code ? (
+    <CodeBlockStyled>
+      <CodeBlockLibrary
+        style={{
+          fontFamily: "Fira Code ,monospace",
+        }}
+        language="javascript"
+        text={code}
+        showLineNumbers={false}
+        theme={dracula}
+        wrapLines
+        codeBlock
+      />
+    </CodeBlockStyled>
+  ) : (
+    <div />
+  );
 
-const CodeBlock = () => ({
-  some: "any",
-});
+// const Codƒ
