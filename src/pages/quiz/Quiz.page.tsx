@@ -17,7 +17,14 @@ export const QuizPage = () => {
       questions: (
         <>
           <h2
-            dangerouslySetInnerHTML={{ __html: currentQuestion?.header || "" }}
+            // dangerouslySetInnerHTML={{
+            //   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            //   // @ts-ignore
+            //   __html: currentQuestion.header.some || "",
+            // }}
+            dangerouslySetInnerHTML={{
+              __html: currentQuestion?.header || "",
+            }}
           />
           <CodeBlock code={currentQuestion?.question} />
         </>
