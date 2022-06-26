@@ -16,6 +16,9 @@ export enum CodeLanguagesList {
   javascript = "javascript",
   react = "react",
 }
+export enum counterList {
+  counter = "counter",
+}
 
 export type OneOfQuestionModelType = keyof typeof QuestionModel;
 
@@ -24,6 +27,8 @@ export type OneOfLanguageListType = keyof typeof LanguageList;
 export type OneOfPagesListType = keyof typeof PagesList;
 
 export type CodeLanguagesListType = keyof typeof CodeLanguagesList;
+
+// export type counterListType = keyof typeof counterList;
 interface ITestVariant {
   id: string;
   text: string;
@@ -63,6 +68,7 @@ export interface IStore {
     openResetModal: boolean;
     isCorrectVisible: boolean;
   };
+  counter: number;
 }
 
 export type DynamicContentTypes = "questions" | "answers" | "explanation";

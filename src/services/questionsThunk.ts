@@ -1,4 +1,5 @@
 import { data } from "store/data";
+import { setCounter } from "store/reducers/counterOfAnsferSlice";
 import {
   setCurrentContent,
   setCurrentQuestion,
@@ -30,18 +31,22 @@ export const chooseCurrentQuestion =
     dispatch(switchCorrectVisability(false));
 
     const questionsList = getState().questions.list.ru;
+    let counterQuestions = getState().counter;
     const watchedList = questionsList?.filter((question) => !question.watched);
     const watchedListLength = watchedList?.length;
+    counterQuestions += 1;
+    // dispatch(setCounter(counterQuestions));
+    console.log(setCounter(counterQuestions));
 
     if (!!watchedListLength && watchedList && questionsList) {
       const random = randomNumber(0, watchedListLength - 1);
       const randomQuestion = watchedList?.[random];
-
       dispatch(
         setQuestions(checkCurrentQuestion(questionsList, randomQuestion))
       );
       dispatch(setCurrentQuestion(randomQuestion));
       dispatch(setCurrentContent("questions"));
+      // console.log(setCurrentContent("questions"));
       localStorage.setItem(
         APP_NAME,
         JSON.stringify(checkCurrentQuestion(questionsList, randomQuestion))

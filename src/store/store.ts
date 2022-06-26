@@ -2,11 +2,13 @@ import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import questionsSlice from "./reducers/questionsSlice";
 import routingSlice from "./reducers/routingSlice";
 import userSlice from "./reducers/userSlice";
+import counterOfAnsferSlice from "./reducers/counterOfAnsferSlice";
 
 export const rootReducer = combineReducers({
   user: userSlice,
   routing: routingSlice,
   questions: questionsSlice,
+  counter: counterOfAnsferSlice,
 });
 
 export const setupStore = () => {
