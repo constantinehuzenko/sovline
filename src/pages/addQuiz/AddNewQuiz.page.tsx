@@ -54,13 +54,16 @@ export const AddQuiz = () => {
       ?.map((el) => el.replace(/[^`]`([^`][\s\S]*?)`/gm, " <code>$1</code> "))
       ?.map((el) => el.replace(/\*\*([\s\S]*?)\*\*/gm, " <strong>$1</strong> "))
       ?.map((el) => el.replace(/__([\s\S]*?)__/gm, " <strong>$1</strong> "))
-      ?.map((el) => el.replace(/_([\s\S]*?)_/gm, " <em>$1</iem> "));
+      ?.map((el) => el.replace(/_([\s\S]*?)_/gm, " <em>$1</em> "));
 
     const properArray: Array<IQuestionItem> | null | undefined =
       getQuestionsArray?.map((el) => {
+        // const getCorrectAnswerLetter = el
+        //   .match(/####.Ответ:.\w/gm)?.[0]
+        //   .replace(/(####.Ответ:.)(\w)/gm, "$2");
         const getCorrectAnswerLetter = el
-          .match(/####.Ответ:.\w/gm)?.[0]
-          .replace(/(####.Ответ:.)(\w)/gm, "$2");
+          .match(/####.Answer:.\w/gm)?.[0]
+          .replace(/(####.Answer:.)(\w)/gm, "$2");
 
         const correctAnswerOrder =
           getCorrectAnswerLetter &&
@@ -90,8 +93,12 @@ export const AddQuiz = () => {
           })),
           explanation: el
             .match(/<details>[\s\S]*?<\/details>/gm)?.[0]
+            // .replace(
+            //   /([\s\S]*?#{4}.Ответ:.\w\n\n)([\s\S]*?)(<\/p>[\s\S]*?)/gm,
+            //   "$2"
+            // ),
             .replace(
-              /([\s\S]*?#{4}.Ответ:.\w\n\n)([\s\S]*?)(<\/p>[\s\S]*?)/gm,
+              /([\s\S]*?#{4}.Answer:.\w\n\n)([\s\S]*?)(<\/p>[\s\S]*?)/gm,
               "$2"
             ),
           watched: false,
