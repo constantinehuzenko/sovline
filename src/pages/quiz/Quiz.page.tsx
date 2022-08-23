@@ -17,11 +17,6 @@ export const QuizPage = () => {
       questions: (
         <>
           <h2
-            // dangerouslySetInnerHTML={{
-            //   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            //   // @ts-ignore
-            //   __html: currentQuestion.header.some || "",
-            // }}
             dangerouslySetInnerHTML={{
               __html: currentQuestion?.header || "",
             }}
@@ -52,7 +47,6 @@ export const QuizPage = () => {
 
   return (
     <Wrapper>
-      {/* <Link to="1">some</Link> */}
       {openResetModal ? (
         <h1>Your questions run out😭 Start Again?</h1>
       ) : (
