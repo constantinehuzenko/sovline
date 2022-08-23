@@ -2896,7 +2896,7 @@ export const data: Array<IQuestionItem> = [
       },
     ],
     explanation:
-      'We can unpack values from arrays or properties from objects through destructuring. For example:\n\n```javascript\n[a, b] = [1, 2];\n```\n\n<img src="https://i.imgur.com/ADFpVop.png" width="200">\n\nThe value of <code>a</code>  is now <code>1</code> , and the value of <code>b</code>  is now <code>2</code> What we actually did in the question, is:\n\n```javascript\n[y] = [1, 2, 3, 4, 5];\n```\n\n<img src="https://i.imgur.com/NzGkMNk.png" width="200">\n\nThis means that the value of <code>y</code>  is equal to the first value in the array, which is the number <code>1</code> When we log <code>y</code> , <code>1</code>  is returned.\n\n\n',
+      'We can unpack values from arrays or properties from objects through destructuring. For example:\n\n<code>[a, b] = [1, 2]</code>;\n\n<img src="https://i.imgur.com/ADFpVop.png" width="200">\n\nThe value of <code>a</code>  is now <code>1</code> , and the value of <code>b</code>  is now <code>2</code> What we actually did in the question, is:\n\n<code>[y] = [1, 2, 3, 4, 5];</code>\n\n<img src="https://i.imgur.com/NzGkMNk.png" width="200">\n\nThis means that the value of <code>y</code>  is equal to the first value in the array, which is the number <code>1</code> When we log <code>y</code> , <code>1</code>  is returned.\n\n\n',
     watched: false,
     isMarked: false,
     rate: 0,
