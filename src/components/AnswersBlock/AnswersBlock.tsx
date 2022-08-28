@@ -1,8 +1,7 @@
 /* eslint-disable react/no-danger */
 import { ControlButton } from "components/ControlButton/ControlButton";
 import { useState } from "react";
-import { useSearchParams } from "react-router-dom";
-import { data } from "store/data";
+import { useQuizUrlState } from "utils/hooks/useQuizUrlState.hook";
 import {
   AnswersContainer,
   AnswersItem,
@@ -25,11 +24,7 @@ const addWrong = (id: string) => {
 
 export const AnswersBlock = () => {
   const [isCorrectVisible, setIsCorrectVisible] = useState(false);
-  const [searchParams] = useSearchParams();
-
-  const elementIndex = Number(searchParams.get("currentQuestion"));
-  const currentQuestion = data[elementIndex as number];
-  const currentContent = searchParams.get("currentContent");
+  const { currentQuestion, currentContent } = useQuizUrlState();
 
   return (
     <AnswersContainer>

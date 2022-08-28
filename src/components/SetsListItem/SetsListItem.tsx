@@ -1,6 +1,6 @@
 import { LockSvg } from "assets/svg/LockSvg";
 import { Children } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useQuizUrlState } from "utils/hooks/useQuizUrlState.hook";
 import { StyledLockWrapper, StyledSetsListItem } from "./SetsListItem.styled";
 
 export const SetsListItem = ({
@@ -14,16 +14,15 @@ export const SetsListItem = ({
   author: string;
   available: boolean;
 }) => {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const { setParams } = useQuizUrlState();
 
   return (
     <StyledLockWrapper>
       <StyledSetsListItem
         locked={available}
         onClick={() => {
-          searchParams.set("currentQuestion", "0");
-          searchParams.set("currentContent", "question");
-          setSearchParams(searchParams);
+          setParams("currentQuestion", "0");
+          setParams("currentContent", "question");
         }}
       >
         <h3>{name}</h3>

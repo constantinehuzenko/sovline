@@ -1,9 +1,10 @@
 import { SetsListItem } from "components/SetsListItem/SetsListItem";
 import { Wrapper } from "components/Wrapper/Wrapper";
 import { Children, useEffect } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { setsData } from "store/setsData";
 import styled from "styled-components";
+import { useQuizUrlState } from "utils/hooks/useQuizUrlState.hook";
 
 const StyledLink = styled(Link)`
   color: #fff;
@@ -11,11 +12,11 @@ const StyledLink = styled(Link)`
 `;
 
 export const SetsList = () => {
-  const [, setSearchParams] = useSearchParams();
+  const { setParams } = useQuizUrlState();
 
   useEffect(() => {
-    setSearchParams("");
-  }, [setSearchParams]);
+    setParams("", "");
+  }, []);
 
   return (
     <Wrapper>

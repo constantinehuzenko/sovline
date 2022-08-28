@@ -1,20 +1,16 @@
-import { useSearchParams } from "react-router-dom";
 import { DynamicContentTypes } from "types/model";
+import { useQuizUrlState } from "utils/hooks/useQuizUrlState.hook";
 import { ControlButtonStyled } from "./ControlButton.styled";
 
 export const ControlButton = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
-  const currentContent = searchParams.get("currentContent");
-
-  const elementIndex = Number(searchParams.get("currentQuestion"));
+  const { setParams, currentContent, currentQuestionIndex } = useQuizUrlState();
 
   const Buttons: Record<DynamicContentTypes, JSX.Element> = {
     question: (
       <button
         type="button"
         onClick={() => {
-          searchParams.set("currentContent", "answer");
-          setSearchParams(searchParams);
+          setParams("currentContent", "answer");
         }}
       >
         🎯 SHOW ANSWERS
@@ -25,8 +21,7 @@ export const ControlButton = () => {
       <button
         type="button"
         onClick={() => {
-          searchParams.set("currentContent", "explanation");
-          setSearchParams(searchParams);
+          setParams("currentContent", "explanation");
         }}
       >
         🚀 SHOW EXPLANATION
@@ -37,9 +32,8 @@ export const ControlButton = () => {
       <button
         type="button"
         onClick={() => {
-          searchParams.set("currentQuestion", (elementIndex + 1).toString());
-          searchParams.set("currentContent", "question");
-          setSearchParams(searchParams);
+          setParams("currentQuestion", (currentQuestionIndex + 1).toString());
+          setParams("currentContent", "question");
         }}
       >
         ⚔️ NEXT QUESTION

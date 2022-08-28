@@ -4,16 +4,11 @@ import { CodeBlock } from "components/CodeBock/CodeBlock";
 import { ExplanationBlock } from "components/ExplanationBlock/ExplanationBlock";
 import { Wrapper } from "components/Wrapper/Wrapper";
 import { useMemo } from "react";
-import { useSearchParams } from "react-router-dom";
-import { data } from "store/data";
 import { DynamicContentTypes } from "types/model";
+import { useQuizUrlState } from "utils/hooks/useQuizUrlState.hook";
 
 export const QuizPage = () => {
-  const [searchParams] = useSearchParams();
-  const elementIndex = Number(searchParams.get("currentQuestion"));
-  const currentQuestion = data[elementIndex as number];
-
-  const currentContent = searchParams.get("currentContent");
+  const { currentQuestion, currentContent } = useQuizUrlState();
 
   const content: Record<DynamicContentTypes, JSX.Element> = useMemo(
     () => ({
