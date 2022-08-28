@@ -10,10 +10,6 @@ export const WrongAnswers = () => {
 
   return (
     <div>
-      {/* {getLocalStore &&
-        parseLocalStore &&
-        getDataOfWrong &&
-        console.log(getDataOfWrong)} */}
       {getDataOfWrong.length &&
         getDataOfWrong?.map((el) => (
           <div key={el.id} style={{ marginBottom: "8px" }}>

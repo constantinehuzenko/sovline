@@ -1,15 +1,12 @@
 import { useSearchParams } from "react-router-dom";
-import { data } from "store/data";
 import { DynamicContentTypes } from "types/model";
 import { ControlButtonStyled } from "./ControlButton.styled";
 
 export const ControlButton = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const currentContent = searchParams.get("currentContent");
-  // searchParams.set()
 
   const elementIndex = Number(searchParams.get("currentQuestion"));
-  // const currentQuestion = data[elementIndex as number];
 
   const Buttons: Record<DynamicContentTypes, JSX.Element> = {
     question: (

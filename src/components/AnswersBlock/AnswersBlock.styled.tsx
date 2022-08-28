@@ -22,7 +22,6 @@ export const AnswersItem = styled.li`
   list-style: none;
   user-select: none;
   background: #131c28;
-  /* box-shadow: 0 0 1px 2px #192434; */
   box-shadow: 0 0 1px 1px #131c28;
   border-radius: 16px;
   box-shadow: ${(props: { isCorrect: boolean; isVisible: boolean }) =>

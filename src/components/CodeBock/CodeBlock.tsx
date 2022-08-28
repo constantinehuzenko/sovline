@@ -29,5 +29,3 @@ export const CodeBlock = ({ code }: { code: string | null | undefined }) =>
   ) : (
     <div />
   );
-
-// const Codƒ
