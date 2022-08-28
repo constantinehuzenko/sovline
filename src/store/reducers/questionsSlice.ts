@@ -4,13 +4,15 @@ import { DynamicContentTypes, IQuestionItem, IStore } from "types/model";
 
 const initialState: IStore["questions"] = {
   list: {
-    ru: null,
+    ua: null,
     en: null,
   },
   currentQuestion: null,
-  currentContent: "questions",
+  currentContent: "question",
   openResetModal: false,
   isCorrectVisible: false,
+  listLength: 0,
+  alreadyWatchedLength: 0,
 };
 
 export const questionsSlice = createSlice({
@@ -18,7 +20,7 @@ export const questionsSlice = createSlice({
   initialState,
   reducers: {
     setQuestions: (state, action: PayloadAction<Array<IQuestionItem>>) => {
-      state.list = { en: null, ru: action.payload };
+      state.list = { ua: null, en: action.payload };
     },
     setCurrentQuestion: (state, action: PayloadAction<IQuestionItem>) => {
       state.currentQuestion = action.payload;
@@ -32,6 +34,16 @@ export const questionsSlice = createSlice({
     switchCorrectVisability: (state, action: PayloadAction<boolean>) => {
       state.isCorrectVisible = action.payload;
     },
+    setLengths: (
+      state,
+      action: PayloadAction<{
+        listLength: number;
+        alreadyWatchedLength: number;
+      }>
+    ) => {
+      state.listLength = action.payload.listLength;
+      state.alreadyWatchedLength = action.payload.alreadyWatchedLength;
+    },
   },
 });
 
@@ -41,6 +53,7 @@ export const {
   setCurrentContent,
   switchResetModal,
   switchCorrectVisability,
+  setLengths,
 } = questionsSlice.actions;
 
 export default questionsSlice.reducer;

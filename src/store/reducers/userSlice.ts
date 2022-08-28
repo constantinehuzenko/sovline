@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { IStore } from "types/model";
 
 const initialState: IStore["user"] = {
-  language: "ru",
+  language: "en",
   auth: { isSignedIn: false },
 };
 

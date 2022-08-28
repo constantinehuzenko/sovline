@@ -4,7 +4,7 @@ export enum QuestionModel {
 }
 
 export enum LanguageList {
-  ru = "ru",
+  ua = "ua",
   en = "en",
 }
 
@@ -62,7 +62,9 @@ export interface IStore {
     currentContent: DynamicContentTypes;
     openResetModal: boolean;
     isCorrectVisible: boolean;
+    listLength: number;
+    alreadyWatchedLength: number;
   };
 }
 
-export type DynamicContentTypes = "questions" | "answers" | "explanation";
+export type DynamicContentTypes = "question" | "answer" | "explanation";

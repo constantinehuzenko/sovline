@@ -2,6 +2,7 @@ import { data } from "store/data";
 import {
   setCurrentContent,
   setCurrentQuestion,
+  setLengths,
   setQuestions,
   switchCorrectVisability,
   switchResetModal,
@@ -10,7 +11,7 @@ import { AppDispatch, RootState } from "store/store";
 import { IQuestionItem } from "types/model";
 import { randomNumber } from "utils/randomNumber";
 
-const APP_NAME = "HYI_APP";
+const APP_NAME = "HackYI_APP";
 
 const checkCurrentQuestion = (
   watchedList: Array<IQuestionItem>,
@@ -23,13 +24,19 @@ const checkCurrentQuestion = (
 export const setLocalStore = () => (dispatch: AppDispatch) => {
   dispatch(setQuestions(data));
   localStorage.setItem(APP_NAME, JSON.stringify(data));
+  dispatch(
+    setLengths({
+      listLength: data.length,
+      alreadyWatchedLength: 0,
+    })
+  );
 };
 
 export const chooseCurrentQuestion =
   () => (dispatch: AppDispatch, getState: () => RootState) => {
     dispatch(switchCorrectVisability(false));
 
-    const questionsList = getState().questions.list.ru;
+    const questionsList = getState().questions.list.en;
     const watchedList = questionsList?.filter((question) => !question.watched);
     const watchedListLength = watchedList?.length;
 
@@ -41,10 +48,16 @@ export const chooseCurrentQuestion =
         setQuestions(checkCurrentQuestion(questionsList, randomQuestion))
       );
       dispatch(setCurrentQuestion(randomQuestion));
-      dispatch(setCurrentContent("questions"));
+      dispatch(setCurrentContent("question"));
       localStorage.setItem(
         APP_NAME,
         JSON.stringify(checkCurrentQuestion(questionsList, randomQuestion))
+      );
+      dispatch(
+        setLengths({
+          listLength: data.length,
+          alreadyWatchedLength: watchedListLength,
+        })
       );
 
       dispatch(switchResetModal(false));
