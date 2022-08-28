@@ -1,9 +1,8 @@
 /* eslint-disable react/no-danger */
 import { ControlButton } from "components/ControlButton/ControlButton";
+import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { data } from "store/data";
-import { switchCorrectVisability } from "store/reducers/questionsSlice";
-import { useAppDispatch, useAppSelector } from "utils/hooks/redux";
 import {
   AnswersContainer,
   AnswersItem,
@@ -25,8 +24,7 @@ const addWrong = (id: string) => {
 };
 
 export const AnswersBlock = () => {
-  const dispatch = useAppDispatch();
-  const { isCorrectVisible } = useAppSelector((state) => state.questions);
+  const [isCorrectVisible, setIsCorrectVisible] = useState(false);
   const [searchParams] = useSearchParams();
 
   const elementIndex = Number(searchParams.get("currentQuestion"));
@@ -36,7 +34,6 @@ export const AnswersBlock = () => {
   return (
     <AnswersContainer>
       <ListOfAnswers>
-        {console.log({ currentContent })}
         {currentContent === "answer" &&
           currentQuestion?.testVariants?.map((el) => (
             <AnswersItem
@@ -50,7 +47,7 @@ export const AnswersBlock = () => {
                   if (!el.isCorrect) {
                     addWrong(currentQuestion.id);
                   }
-                  dispatch(switchCorrectVisability(true));
+                  setIsCorrectVisible(true);
                 }}
               >
                 {isCorrectVisible && (el.isCorrect ? "👍 " : "💩 ")}

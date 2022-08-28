@@ -13,7 +13,6 @@ import {
 } from "react-router-dom";
 import { data } from "store/data";
 import { DynamicContentTypes } from "types/model";
-import { useAppSelector } from "utils/hooks/redux";
 
 export const QuizPage = () => {
   // const {
@@ -63,27 +62,10 @@ export const QuizPage = () => {
     [currentQuestion]
   );
 
-  const location = useLocation();
-  const params = useParams();
-  const history = useNavigate();
-
-  useEffect(() => {
-    console.log({ location, params, history, searchParams });
-    // setSearchParams();
-    console.log(searchParams.getAll("s"));
-    // console.log({ element });
-    // console.log(new URLSearchParams(location.search));
-  }, [location]);
-
   return (
     <Wrapper>
-      {/* {openResetModal ? (
-        <h1>Your questions run out😭 Start Again?</h1>
-      ) : ( */}
       {content[currentContent as DynamicContentTypes]}
-      {/* )} */}
       <AnswersBlock />
-      {/* {console.log({ history })} */}
     </Wrapper>
   );
 };

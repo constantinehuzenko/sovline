@@ -1,13 +1,9 @@
 import { useSearchParams } from "react-router-dom";
-import { chooseCurrentQuestion } from "services/questionsThunk";
 import { data } from "store/data";
-import { setCurrentContent } from "store/reducers/questionsSlice";
 import { DynamicContentTypes } from "types/model";
-import { useAppDispatch, useAppSelector } from "utils/hooks/redux";
 import { ControlButtonStyled } from "./ControlButton.styled";
 
 export const ControlButton = () => {
-  const dispatch = useAppDispatch();
   const [searchParams, setSearchParams] = useSearchParams();
   const currentContent = searchParams.get("currentContent");
   // searchParams.set()
