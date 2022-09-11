@@ -4,24 +4,23 @@ import { CodeBlock } from "components/CodeBock/CodeBlock";
 import { ExplanationBlock } from "components/ExplanationBlock/ExplanationBlock";
 import { Wrapper } from "components/Wrapper/Wrapper";
 import { useMemo } from "react";
+import { useNavigate } from "react-router-dom";
 import { DynamicContentTypes } from "types/model";
-import { useAppSelector } from "utils/hooks/redux";
+import { useQuizUrlState } from "utils/hooks/useQuizUrlState.hook";
 
 export const QuizPage = () => {
-  const { currentQuestion, currentContent, openResetModal } = useAppSelector(
-    (state) => state.questions
-  );
+  const { currentQuestion, currentContent, isStateValid } = useQuizUrlState();
+  const navigate = useNavigate();
+
+  if (!currentQuestion) {
+    console.log({ currentQuestion });
+  }
 
   const content: Record<DynamicContentTypes, JSX.Element> = useMemo(
     () => ({
-      questions: (
+      question: (
         <>
           <h2
-            // dangerouslySetInnerHTML={{
-            //   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            //   // @ts-ignore
-            //   __html: currentQuestion.header.some || "",
-            // }}
             dangerouslySetInnerHTML={{
               __html: currentQuestion?.header || "",
             }}
@@ -29,7 +28,7 @@ export const QuizPage = () => {
           <CodeBlock code={currentQuestion?.question} />
         </>
       ),
-      answers: (
+      answer: (
         <>
           <h2
             dangerouslySetInnerHTML={{ __html: currentQuestion?.header || "" }}
@@ -52,13 +51,14 @@ export const QuizPage = () => {
 
   return (
     <Wrapper>
-      {/* <Link to="1">some</Link> */}
-      {openResetModal ? (
-        <h1>Your questions run out😭 Start Again?</h1>
+      {isStateValid ? (
+        <>
+          {content[currentContent as DynamicContentTypes]}
+          <AnswersBlock />
+        </>
       ) : (
-        content[currentContent]
+        <div>error</div>
       )}
-      <AnswersBlock />
     </Wrapper>
   );
 };

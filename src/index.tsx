@@ -3,22 +3,17 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import * as serviceWorker from "serviceWorker";
-import { setupStore } from "store/store";
 import { GlobalStyle } from "styles/globalStyles";
 import { HashRouter } from "react-router-dom";
 import { ErrorBoundary } from "pages/ErrorBoundary/ErrorBoundary.page";
-
-const store = setupStore();
 
 ReactDOM.render(
   <React.StrictMode>
     <GlobalStyle />
     <ErrorBoundary>
-      <Provider store={store}>
-        <HashRouter>
-          <App />
-        </HashRouter>
-      </Provider>
+      <HashRouter>
+        <App />
+      </HashRouter>
     </ErrorBoundary>
   </React.StrictMode>,
   document.getElementById("root")
