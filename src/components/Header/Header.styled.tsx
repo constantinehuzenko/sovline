@@ -21,7 +21,7 @@ export const StyledHeader = styled.div`
     padding: 0 8px;
   }
 
-  img {
+  a > img {
     width: 180px;
     margin: 8px 0;
   }

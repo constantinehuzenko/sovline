@@ -26,6 +26,8 @@ export const AnswersBlock = () => {
   const [isCorrectVisible, setIsCorrectVisible] = useState(false);
   const { currentQuestion, currentContent } = useQuizUrlState();
 
+  const resetCorrect = () => setIsCorrectVisible(false);
+
   return (
     <AnswersContainer>
       <ListOfAnswers>
@@ -50,7 +52,7 @@ export const AnswersBlock = () => {
               </button>
             </AnswersItem>
           ))}
-        <ControlButton />
+        <ControlButton handleIsCorrectVisible={resetCorrect} />
       </ListOfAnswers>
     </AnswersContainer>
   );

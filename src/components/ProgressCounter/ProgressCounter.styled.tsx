@@ -1,9 +1,12 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const StyledCounter = styled(Link)<{ length: number; count: number }>`
-  width: 70px;
-  height: 24px;
+export const StyledCounter = styled.div<{
+  length: number;
+  count: number;
+  size: "small" | "long";
+}>`
+  width: ${({ size }) => (size === "small" ? "70px" : "unset")};
+  height: ${({ size }) => (size === "small" ? "24px" : "18px")};
   border-radius: 24px;
   background: black;
   position: relative;

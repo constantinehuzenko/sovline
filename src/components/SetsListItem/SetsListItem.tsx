@@ -1,7 +1,11 @@
 import { LockSvg } from "assets/svg/LockSvg";
+import { ProgressCounter } from "components/ProgressCounter/ProgressCounter";
 import { Children } from "react";
-import { useQuizUrlState } from "utils/hooks/useQuizUrlState.hook";
-import { StyledLockWrapper, StyledSetsListItem } from "./SetsListItem.styled";
+import {
+  StyledHash,
+  StyledLockWrapper,
+  StyledSetsListItem,
+} from "./SetsListItem.styled";
 
 export const SetsListItem = ({
   name,
@@ -14,22 +18,23 @@ export const SetsListItem = ({
   author: string;
   available: boolean;
 }) => {
-  const { setParams } = useQuizUrlState();
+  const lastItem = Number(localStorage.getItem("HackYI_APP_last"));
 
   return (
     <StyledLockWrapper>
-      <StyledSetsListItem
-        locked={available}
-        onClick={() => {
-          setParams("currentQuestion", "0");
-          setParams("currentContent", "question");
-        }}
-      >
+      <StyledSetsListItem locked={available}>
         <h3>{name}</h3>
-        {Children.toArray(
-          hashtagsList.map((item, i) => <span id={item + i}>#{item}</span>)
+        <StyledHash>
+          {Children.toArray(
+            hashtagsList.map((item, i) => <span id={item + i}>#{item}</span>)
+          )}
+        </StyledHash>
+        <h5>{author}</h5>
+        {available ? (
+          <ProgressCounter count={lastItem || 0} length={50} size="long" />
+        ) : (
+          <ProgressCounter count={0} length={50} size="long" />
         )}
-        <div>{author}</div>
       </StyledSetsListItem>
 
       {!available && <LockSvg size={35} color="#a3c9fe" />}

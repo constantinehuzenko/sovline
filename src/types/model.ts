@@ -30,4 +30,9 @@ export interface IQuestionItem {
   rate?: number;
 }
 
-export type DynamicContentTypes = "question" | "answer" | "explanation";
+export const DynamicContentTypesArr = [
+  "question",
+  "answer",
+  "explanation",
+] as const;
+export type DynamicContentTypes = typeof DynamicContentTypesArr[number];
