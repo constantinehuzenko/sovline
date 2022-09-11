@@ -10,11 +10,6 @@ import { useQuizUrlState } from "utils/hooks/useQuizUrlState.hook";
 
 export const QuizPage = () => {
   const { currentQuestion, currentContent, isStateValid } = useQuizUrlState();
-  const navigate = useNavigate();
-
-  if (!currentQuestion) {
-    console.log({ currentQuestion });
-  }
 
   const content: Record<DynamicContentTypes, JSX.Element> = useMemo(
     () => ({
