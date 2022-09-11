@@ -4,17 +4,11 @@ import { CodeBlock } from "components/CodeBock/CodeBlock";
 import { ExplanationBlock } from "components/ExplanationBlock/ExplanationBlock";
 import { Wrapper } from "components/Wrapper/Wrapper";
 import { useMemo } from "react";
-import { useNavigate } from "react-router-dom";
 import { DynamicContentTypes } from "types/model";
 import { useQuizUrlState } from "utils/hooks/useQuizUrlState.hook";
 
 export const QuizPage = () => {
   const { currentQuestion, currentContent, isStateValid } = useQuizUrlState();
-  const navigate = useNavigate();
-
-  if (!currentQuestion) {
-    console.log({ currentQuestion });
-  }
 
   const content: Record<DynamicContentTypes, JSX.Element> = useMemo(
     () => ({

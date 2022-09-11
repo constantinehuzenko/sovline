@@ -1,7 +1,6 @@
 import { App } from "App";
 import React from "react";
 import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
 import * as serviceWorker from "serviceWorker";
 import { GlobalStyle } from "styles/globalStyles";
 import { HashRouter } from "react-router-dom";

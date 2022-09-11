@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import { AnswersItem } from "components/AnswersBlock/AnswersBlock.styled";
 import { CodeBlock } from "components/CodeBock/CodeBlock";
 import { ExplanationBlock } from "components/ExplanationBlock/ExplanationBlock";
