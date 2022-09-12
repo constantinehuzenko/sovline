@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/hackYourInterview/static/js/main.618f2a2e.js",
+    "main.js": "/hackYourInterview/static/js/main.b85f3cb8.js",
     "react-syntax-highlighter/refractor-core-import.js": "/hackYourInterview/static/js/react-syntax-highlighter/refractor-core-import.6a009c06.chunk.js",
     "react-syntax-highlighter_languages_refractor_abap.js": "/hackYourInterview/static/js/react-syntax-highlighter_languages_refractor_abap.820464c3.chunk.js",
     "react-syntax-highlighter_languages_refractor_actionscript.js": "/hackYourInterview/static/js/react-syntax-highlighter_languages_refractor_actionscript.1d0066e9.chunk.js",
@@ -155,7 +155,7 @@
     "react-syntax-highlighter_languages_refractor_yaml.js": "/hackYourInterview/static/js/react-syntax-highlighter_languages_refractor_yaml.03fddddf.chunk.js",
     "static/media/logo113.png": "/hackYourInterview/static/media/logo113.00fe053443d86fc91de5.png",
     "index.html": "/hackYourInterview/index.html",
-    "main.618f2a2e.js.map": "/hackYourInterview/static/js/main.618f2a2e.js.map",
+    "main.b85f3cb8.js.map": "/hackYourInterview/static/js/main.b85f3cb8.js.map",
     "refractor-core-import.6a009c06.chunk.js.map": "/hackYourInterview/static/js/react-syntax-highlighter/refractor-core-import.6a009c06.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abap.820464c3.chunk.js.map": "/hackYourInterview/static/js/react-syntax-highlighter_languages_refractor_abap.820464c3.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_actionscript.1d0066e9.chunk.js.map": "/hackYourInterview/static/js/react-syntax-highlighter_languages_refractor_actionscript.1d0066e9.chunk.js.map",
@@ -310,6 +310,6 @@
     "react-syntax-highlighter_languages_refractor_yaml.03fddddf.chunk.js.map": "/hackYourInterview/static/js/react-syntax-highlighter_languages_refractor_yaml.03fddddf.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.618f2a2e.js"
+    "static/js/main.b85f3cb8.js"
   ]
 }
