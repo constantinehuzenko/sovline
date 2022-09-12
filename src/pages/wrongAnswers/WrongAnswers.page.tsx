@@ -65,7 +65,7 @@ export const WrongAnswers = () => {
                     navigate("/");
                   }}
                 >
-                  🧼 RESET
+                  💨 RESET
                 </button>
               </ControlButtonStyled>
             </ListOfAnswers>
