@@ -2615,11 +2615,6 @@ export const data: Array<IQuestionItem> = [
         text: '<code>"NaN"</code>',
         isCorrect: false,
       },
-      {
-        id: "deb37f48-ad78-4ab1-b645-c49690ff8b4e",
-        text: '<code>"NaN"</code>',
-        isCorrect: false,
-      },
     ],
     explanation:
       'The rest parameter  <code>...args</code> ) lets us "collect" all remaining arguments into an array. An array is an object, so <code>typeof args</code>  returns <code>"object"</code> \n\n\n',
@@ -2649,11 +2644,6 @@ export const data: Array<IQuestionItem> = [
         id: "cdcbe8a1-559f-44fe-b7fa-abd1c15a36ff",
         text: "<code>ReferenceError</code>",
         isCorrect: true,
-      },
-      {
-        id: "7b738516-4334-4efa-b624-48472bc0942d",
-        text: "<code>TypeError</code>",
-        isCorrect: false,
       },
       {
         id: "7b738516-4334-4efa-b624-48472bc0942d",
@@ -2886,21 +2876,6 @@ export const data: Array<IQuestionItem> = [
         id: "881a34e1-b891-4d09-bbb3-3933c5a3f635",
         text: '<code>"Just give Lydia pizza already!"</code>',
         isCorrect: true,
-      },
-      {
-        id: "780f5de5-69ad-4eab-babd-e9ae7b6815b6",
-        text: "<code>TypeError: not a function</code>",
-        isCorrect: false,
-      },
-      {
-        id: "c2869445-b7a1-42a0-b60c-6ed5f6f6e3ad",
-        text: "<code>SyntaxError</code>",
-        isCorrect: false,
-      },
-      {
-        id: "cd3535ca-9264-400b-b6ba-f5fbe99e17a6",
-        text: "<code>undefined</code>",
-        isCorrect: false,
       },
       {
         id: "780f5de5-69ad-4eab-babd-e9ae7b6815b6",
@@ -3509,21 +3484,6 @@ export const data: Array<IQuestionItem> = [
         text: '<code>[{ name: "Lydia" }]</code>',
         isCorrect: true,
       },
-      {
-        id: "74e9b2a5-b0ca-4375-bc3a-0559385a94ba",
-        text: "<code>[null]</code>",
-        isCorrect: false,
-      },
-      {
-        id: "d37cac91-ad35-49db-bebc-31020daf7619",
-        text: "<code>[{}]</code>",
-        isCorrect: false,
-      },
-      {
-        id: "ed344154-51a5-464a-ba12-8b574dc33e0c",
-        text: '<code>[{ name: "Lydia" }]</code>',
-        isCorrect: true,
-      },
     ],
     explanation:
       'First, we declare a variable <code>person</code>  with the value of an object that has a <code>name</code>  property.\n\n<img src="https://i.imgur.com/TML1MbS.png" width="200">\n\nThen, we declare a variable called <code>members</code> We set the first element of that array equal to the value of the <code>person</code>  variable. Objects interact by  <em>reference</em>  when setting them equal to each other. When you assign a reference from one variable to another, you make a  <em>copy</em>  of that reference. (note that they don\'t have the  <em>same</em>  reference!)\n\n<img src="https://i.imgur.com/FSG5K3F.png" width="300">\n\nThen, we set the variable <code>person</code>  equal to <code>null</code>\n\n<img src="https://i.imgur.com/sYjcsMT.png" width="300">\n\nWe are only modifying the value of the <code>person</code>  variable, and not the first element in the array, since that element has a different (copied) reference to the object. The first element in <code>members</code>  still holds its reference to the original object. When we log the <code>members</code>  array, the first element still holds the value of the object, which gets logged.\n\n\n',
@@ -3760,11 +3720,6 @@ export const data: Array<IQuestionItem> = [
       {
         id: "11726dcf-6f49-4e95-b672-455c69ed6160",
         text: "<code>ReferenceError</code>",
-        isCorrect: false,
-      },
-      {
-        id: "235d6c87-0479-4d29-b2f6-fcabc686230d",
-        text: "<code>TypeError</code>",
         isCorrect: false,
       },
       {
