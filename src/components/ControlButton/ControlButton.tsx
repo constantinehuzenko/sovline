@@ -48,7 +48,6 @@ export const ControlButton = ({
               JSON.stringify(currentQuestionIndex + 1)
             );
           } else {
-            localStorage.removeItem("HackYI_APP_last");
             navigate("/wrong-answers");
           }
         }}
