@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/sovline/static/js/main.471d9269.js",
+    "main.js": "/sovline/static/js/main.af06ac3a.js",
     "react-syntax-highlighter/refractor-core-import.js": "/sovline/static/js/react-syntax-highlighter/refractor-core-import.394c7796.chunk.js",
     "react-syntax-highlighter_languages_refractor_abap.js": "/sovline/static/js/react-syntax-highlighter_languages_refractor_abap.cb0dd36c.chunk.js",
     "react-syntax-highlighter_languages_refractor_actionscript.js": "/sovline/static/js/react-syntax-highlighter_languages_refractor_actionscript.098b0e6b.chunk.js",
@@ -153,9 +153,8 @@
     "react-syntax-highlighter_languages_refractor_xojo.js": "/sovline/static/js/react-syntax-highlighter_languages_refractor_xojo.292ade24.chunk.js",
     "react-syntax-highlighter_languages_refractor_xquery.js": "/sovline/static/js/react-syntax-highlighter_languages_refractor_xquery.e7bbe159.chunk.js",
     "react-syntax-highlighter_languages_refractor_yaml.js": "/sovline/static/js/react-syntax-highlighter_languages_refractor_yaml.9c1635c3.chunk.js",
-    "static/media/logo113.png": "/sovline/static/media/logo113.00fe053443d86fc91de5.png",
     "index.html": "/sovline/index.html",
-    "main.471d9269.js.map": "/sovline/static/js/main.471d9269.js.map",
+    "main.af06ac3a.js.map": "/sovline/static/js/main.af06ac3a.js.map",
     "refractor-core-import.394c7796.chunk.js.map": "/sovline/static/js/react-syntax-highlighter/refractor-core-import.394c7796.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abap.cb0dd36c.chunk.js.map": "/sovline/static/js/react-syntax-highlighter_languages_refractor_abap.cb0dd36c.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_actionscript.098b0e6b.chunk.js.map": "/sovline/static/js/react-syntax-highlighter_languages_refractor_actionscript.098b0e6b.chunk.js.map",
@@ -310,6 +309,6 @@
     "react-syntax-highlighter_languages_refractor_yaml.9c1635c3.chunk.js.map": "/sovline/static/js/react-syntax-highlighter_languages_refractor_yaml.9c1635c3.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.471d9269.js"
+    "static/js/main.af06ac3a.js"
   ]
 }
