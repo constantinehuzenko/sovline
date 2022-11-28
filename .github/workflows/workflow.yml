@@ -1,4 +1,4 @@
-name: HYI app CI/CD
+name: sovline app CI/CD
 
 on:
   push:
