@@ -9,16 +9,16 @@ import {
 } from "./AnswersBlock.styled";
 
 const addWrong = (id: string) => {
-  const getLocalStore = localStorage.getItem("HackYI_APP_wrong");
+  const getLocalStore = localStorage.getItem("sovline_app_wrong");
   const parseLocalStore = getLocalStore && JSON.parse(getLocalStore);
 
   if (parseLocalStore) {
     localStorage.setItem(
-      "HackYI_APP_wrong",
+      "sovline_app_wrong",
       JSON.stringify([...parseLocalStore, id])
     );
   } else {
-    localStorage.setItem("HackYI_APP_wrong", JSON.stringify([id]));
+    localStorage.setItem("sovline_app_wrong", JSON.stringify([id]));
   }
 };
 

@@ -18,7 +18,7 @@ export const SetsListItem = ({
   author: string;
   available: boolean;
 }) => {
-  const lastItem = Number(localStorage.getItem("HackYI_APP_last"));
+  const lastItem = Number(localStorage.getItem("sovline_app_last"));
 
   return (
     <StyledLockWrapper>

@@ -44,7 +44,7 @@ export const ControlButton = ({
             setParams("currentContent", "question");
             handleIsCorrectVisible?.();
             localStorage.setItem(
-              "HackYI_APP_last",
+              "sovline_app_last",
               JSON.stringify(currentQuestionIndex + 1)
             );
           } else {

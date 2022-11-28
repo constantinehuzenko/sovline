@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 import { data } from "store/data";
 
 export const WrongAnswers = () => {
-  const getLocalStore = localStorage.getItem("HackYI_APP_wrong");
+  const getLocalStore = localStorage.getItem("sovline_app_wrong");
   const parseLocalStore = getLocalStore && JSON.parse(getLocalStore);
 
   const getDataOfWrong = data?.filter((el) => {
@@ -60,8 +60,8 @@ export const WrongAnswers = () => {
                 <button
                   type="button"
                   onClick={() => {
-                    localStorage.removeItem("HackYI_APP_wrong");
-                    localStorage.removeItem("HackYI_APP_last");
+                    localStorage.removeItem("sovline_app_wrong");
+                    localStorage.removeItem("sovline_app_last");
                     navigate("/");
                   }}
                 >

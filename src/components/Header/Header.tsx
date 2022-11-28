@@ -14,7 +14,7 @@ export const Header = () => {
     <StyledHeader>
       <div>
         <StyledLink to="/" locked="unset">
-          <img src={require("../../assets/png/logo113.png")} alt="logo" />
+          <h1>sovline</h1>
         </StyledLink>
         {pathname === "/quiz" && (
           <StyledLink to="/wrong-answers" locked="unset">

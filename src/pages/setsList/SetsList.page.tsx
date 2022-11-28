@@ -5,13 +5,14 @@ import { setsData } from "store/setsData";
 import styled from "styled-components";
 
 export const StyledLink = styled(Link)<{ locked: "none" | "unset" }>`
+  padding: 4px 0 6px;
   color: #fff;
   text-decoration: none;
   pointer-events: ${({ locked }) => locked};
 `;
 
 export const SetsList = () => {
-  const lastItem = Number(localStorage.getItem("HackYI_APP_last"));
+  const lastItem = Number(localStorage.getItem("sovline_app_last"));
 
   return (
     <Wrapper>
